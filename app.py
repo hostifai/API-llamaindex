@@ -18,10 +18,10 @@ from llama_index.core import (
 )
 
 # NOTE: for local testing only, do NOT deploy with your key hardcoded
-os.environ["OPENAI_API_KEY"] = "your key here"
+os.environ["OPENAI_API_KEY"] = "key"
 
 index = None
-
+index_dir = "C:\\Users\\Lenovo\\API\\index"
 
 def initialize_index():
     global index
@@ -29,7 +29,7 @@ def initialize_index():
     if os.path.exists(index_dir):
         index = load_index_from_storage(storage_context)
     else:
-        documents = SimpleDirectoryReader("./documents").load_data()
+        documents = SimpleDirectoryReader("paul").load_data()
         index = VectorStoreIndex.from_documents(
             documents, storage_context=storage_context
         )
