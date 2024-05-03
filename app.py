@@ -60,3 +60,6 @@ def initialize_index():
             documents, storage_context=storage_context
         )
         storage_context.persist(index_dir)
+
+
+# hhhhhhhhhhhhhhhhhhhhhhhhhhibanokra
